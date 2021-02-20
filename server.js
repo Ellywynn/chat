@@ -17,18 +17,20 @@ app.get('/', (req, res) => {
 const users = {};
 
 io.on('connection', socket => {
-    users.push(socket.id);
+
 
     socket.on('disconnect', () => {
+        socket.broadcast.emit('userLeft', users[socket.id]);
     })
 
     socket.on('message', msg => {
-        socket.broadcast.emit('message', msg);
+        socket.broadcast.emit('message', users[socket.id], msg);
     });
 
     socket.on('userJoined', (username) => {
-        users[username] = socket.id;
-        socket.broadcast.emit('userJoined', username);
+        users[socket.id] = username;
+        socket.broadcast.emit('userJoined', users[socket.id]);
+        socket.emit('userAccepted', socket.id);
     });
 })
 
