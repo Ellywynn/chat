@@ -1,0 +1,213 @@
+body, html{
+    height: 100%;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+}
+
+::-webkit-scrollbar{
+    width: 10px;
+}
+
+::-webkit-scrollbar-track{
+    border: 4px solid rgb(61,27,58);
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb{
+    background: rgb(144,47,139);
+    border: 3px;
+    border-radius: 10px;
+}
+
+main{
+    height: 100%;
+}
+
+.chat-container{
+    height: 100%;
+    position: relative;
+    display: flex;
+    z-index: 10;
+}
+
+.chat-name{
+    color: #fff;
+    background-color: rgb(51,26,49);
+    width: 100%;
+    height: 7%;
+    border-bottom: 1px solid black;
+}
+
+.chat-name h3{
+    margin: 0;
+    padding: 0.4em;
+    text-align: center;
+}
+
+.members-sidebar{
+    background-color: rgb(51,26,49);
+    width: 25%;
+    border-right: 1px solid black;
+    position: relative;
+}
+
+.members-sidebar .members-text{
+    color: white;
+    height: 7%;
+    background-color: rgb(51,26,49);
+    border-bottom: 1px solid rgb(19,5,16);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.members-sidebar .members-text h3{
+    margin: 0;
+    padding: 0.4em;
+    font-size: 1.5em;
+}
+
+.members-sidebar .members{
+    padding: 0;
+    margin: 0;
+    height: 88%;
+    overflow-y: auto;
+}
+
+.members-sidebar .love{
+    width: 100%;
+    height: 4%;
+    text-align: center;
+    font-weight: 300;
+    color: #fff;
+    padding: 0;
+    margin: 0;
+    font-size: 1.2em;
+    bottom: 0;
+}
+
+.chat{
+    background-color: rgb(39,15,36);
+    width: 100%;
+    position: relative;
+}
+
+.chat .chat-name{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5em;
+}
+
+.chat-history{  
+    padding: 0;
+    margin: 0;
+    overflow-y: auto;
+    height: 86%;
+    position: relative;
+}
+
+.chat-history .message{
+    color:#fff;
+    max-width: 35%;
+    display: inline-block;
+    padding: 10px;
+    border-radius: 0.7em;
+    margin: 15px 0;
+}
+
+.chat-history .message h4{
+    margin: 0 0 0.3em 0;
+    padding: 0;
+    font-size: 1.5em;
+    font-weight: 500;
+    width: auto;
+    color: rgb(250,100,216);
+}
+
+.chat-history .message .message-text{
+    font-weight: 300;
+    margin: 0;
+    padding: 0;
+    font-size: 1.2em;
+    width: auto;
+}
+
+.chat-history .received{
+    margin-left: 1em;
+    background-color: rgb(61,27,58);
+}
+
+.chat-history .sent{
+    margin-right: 1em;
+    background-color: rgb(144,47,139);
+}
+
+.message-wrapper{
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.chat #chat-form{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    background-color: rgb(51,26,49);
+    display: flex;
+    height: 7%;
+    align-items: center;
+}
+
+#chat-form #chat-input{
+    margin: 0 0.8em;
+    padding: 0;
+    height: 70%;
+    background-color: rgba(0,0,0,0);
+    width: 93%;
+    outline: none;
+    border-style: none none solid none;
+    border-color: #fff;
+    border-width: 1px;
+    color: rgb(153, 102, 109);
+    font-size: 24px;
+}
+
+#chat-form #chat-input::placeholder{
+    color: rgb(124,93,97);
+}
+
+#chat-form #button-send{
+    color: rgb(144,47,139);
+    margin-left: 2em;
+    padding: 0;
+    height: 100%;
+    outline: none;
+    cursor: pointer;
+    background-color: rgba(0,0,0,0);
+    border: none;
+}
+
+.fa-paper-plane{
+    font-size: 1.5em;
+}
+
+footer{
+    margin: 0;
+    padding: 0;
+    height: 5%;
+    background-color: #333;
+    color:#fff;
+    width: 100%;
+}
+
+footer h3{
+    font-size: 1.2em;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
